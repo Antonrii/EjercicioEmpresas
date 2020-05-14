@@ -31,8 +31,8 @@ $factory->define(User::class, function (Faker $faker) {
 $factory->define(Company::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
-        'address' => $faker->text(50),
-        'website' => $faker->text(30),
+        'address' => $faker->address(10),
+        'website' => $faker->url(15),
         'email' => $faker->unique()->safeEmail,
     ];
 });

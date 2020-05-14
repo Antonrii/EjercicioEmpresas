@@ -18,7 +18,7 @@
 
           @if ($errors->any())
           <div class="alert alert-danger" role="alert">
-            <p>Pagina web o Email ya existe</p>
+            <p>Sitio Web o Email ya existe</p>
           </div>
           @endif
 
@@ -26,22 +26,22 @@
             @csrf
             <div class="form-group">
               <label for="name">Nombre</label>
-              <input type="text" class="form-control" name="name" placeholder="Nombre">
+              <input type="text" class="form-control" name="name" placeholder="Nombre" required>
             </div>
 
             <div class="form-group">
               <label for="address">Direccion</label>
-              <input type="text" class="form-control" name="address" placeholder="Direccion">
+              <input type="text" class="form-control" name="address" placeholder="Direccion" required>
             </div>
 
             <div class="form-group">
               <label for="website">Pagina Web</label>
-              <input type="text" class="form-control" name="website" placeholder="Pagina Web">
+              <input type="url" class="form-control" name="website" placeholder="http://www.ejemplo.com" required>
             </div>
 
             <div class="form-group">
               <label for="email">Correo Electronico</label>
-              <input type="email" class="form-control" name="email" placeholder="Correo Electronico">
+              <input type="email" class="form-control" name="email" placeholder="Correo Electronico" required>
             </div>
 
             <button type="submit" class="btn btn-success float-right">Crear</button>

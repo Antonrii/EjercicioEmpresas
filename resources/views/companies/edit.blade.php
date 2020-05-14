@@ -18,7 +18,7 @@
 
           @if ($errors->any())
           <div class="alert alert-danger" role="alert">
-            <p>Pagina web o Email ya existe</p>
+            <p>Sitio Web o Email ya existe</p>
           </div>
           @endif
 
@@ -27,22 +27,22 @@
             @method('PUT')
             <div class="form-group">
               <label for="name">Nombre</label>
-              <input type="text" class="form-control" name="name" placeholder="Nombre" value=" {{ $company->name }} ">
+              <input type="text" class="form-control" name="name" placeholder="Nombre" value=" {{ $company->name }} " required>
             </div>
 
             <div class="form-group">
               <label for="address">Direccion</label>
-              <input type="text" class="form-control" name="address" placeholder="Direccion" value=" {{ $company->address }} ">
+              <input type="text" class="form-control" name="address" placeholder="Direccion" value=" {{ $company->address }} " required>
             </div>
 
             <div class="form-group">
               <label for="website">Pagina Web</label>
-              <input type="text" class="form-control" name="website" placeholder="Pagina Web" value=" {{ $company->website }} ">
+              <input type="url" class="form-control" name="website" placeholder="Pagina Web" value=" {{ $company->website }} " required>
             </div>
 
             <div class="form-group">
               <label for="email">Correo Electronico</label>
-              <input type="email" class="form-control" name="email" placeholder="Correo Electronico" value=" {{ $company->email }} ">
+              <input type="email" class="form-control" name="email" placeholder="Correo Electronico" value=" {{ $company->email }} " required>
             </div>
 
             <button type="submit" class="btn btn-success float-right">Actualizar</button>
